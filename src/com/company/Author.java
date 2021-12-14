@@ -10,11 +10,7 @@ public class Author {
         this.authorSurname = authorSurname;
     }
 
-    public Author() {
-        this.authorName = null;
-        this.authorSurname = null;
 
-    }
 
     public String getAuthorName() {
         return authorName;
