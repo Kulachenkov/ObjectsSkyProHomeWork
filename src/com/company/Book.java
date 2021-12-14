@@ -1,12 +1,10 @@
 package com.company;
 
 public class Book {
-
     private Author author;
     private String bookName;
     private int publicationYear;
     public static int bookCounter = 0;
-
 
     public Book(Author author, String bookName, int publicationYear) {
         this.author = author;
@@ -39,6 +37,5 @@ public class Book {
         System.out.println("Книга № "+ Book.getBookCounter() + " в библиотеке: Автор: " + author.getAuthorName() + " "+ author.getAuthorSurname() +
                 " Название: " + bookName +  " Год издания: " + publicationYear);
     }
-
 
 }

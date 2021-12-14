@@ -1,7 +1,6 @@
 package com.company;
 
 public class Author {
-
     private String authorName;
     private String authorSurname;
 
@@ -9,8 +8,6 @@ public class Author {
         this.authorName = authorName;
         this.authorSurname = authorSurname;
     }
-
-
 
     public String getAuthorName() {
         return authorName;
