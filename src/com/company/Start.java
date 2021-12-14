@@ -6,19 +6,12 @@ public class Start {
         Author tolstoi = new Author("Лев", "Толстой");
 
         Book firstBook = new Book(tolstoi, "Война и мир", 1975);
+        firstBook.printBook();
         Book secondBook = new Book(pushkin, "Евгений Онегин", 1965);
-
-        System.out.println("Книга № 1 в библиотеке: Автор: " + tolstoi.getAuthorName() + " " + tolstoi.getAuthorSurname() + " " +
-                 " Название: " + firstBook.getBookName() +  " Год издания: " + firstBook.getPublicationYear());
-
-        System.out.println("Книга № 1 в библиотеке: Автор: " + pushkin.getAuthorName() + " " + pushkin.getAuthorSurname() + " " +
-                " Название: " + secondBook.getBookName() +  " Год издания: " + secondBook.getPublicationYear());
-
-
+        secondBook.printBook();
         firstBook.setPublicationYear(1990);
+        firstBook.printBook();
 
-        System.out.println("Книга № 1 в библиотеке: Автор: " + tolstoi.getAuthorName() + " " + tolstoi.getAuthorSurname() + " " +
-                " Название: " + firstBook.getBookName() +  " Год издания: " + firstBook.getPublicationYear());
 
 
     }
