@@ -38,12 +38,12 @@ public class Book {
                 " Название: " + bookName +  " Год издания: " + publicationYear);
     }
 
-    public String[] library(){
-        String [] books = new String[5];
-        books[getBookCounter()] = String.join(" ", author.getAuthorName()+ author.getAuthorSurname()+ bookName + publicationYear);
-        return books;
-    }
-
-
-
+    public String toString(){
+        return String.format("%s %s: %s: %d",
+                this.author.getAuthorName(),
+                this.author.getAuthorSurname(),
+                this.bookName,
+                this.publicationYear
+        );
+        }
 }
