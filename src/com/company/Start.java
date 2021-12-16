@@ -15,7 +15,14 @@ public class Start {
         books[1].setPublicationYear(1990);
         printBooks();
 
-
+        Author tolstoiTwo = new Author("Лев", "Толстой");
+        Book thirdBook = new Book(tolstoiTwo, "Война и мир", 1975);
+        books[2] = thirdBook;
+        printBooks();
+        System.out.println(tolstoi.equals(tolstoiTwo));
+        System.out.println(tolstoi.hashCode());
+        System.out.println(tolstoiTwo.hashCode());
+        System.out.println(thirdBook.equals(firstBook));
 
     }
     public static void printBooks(){
