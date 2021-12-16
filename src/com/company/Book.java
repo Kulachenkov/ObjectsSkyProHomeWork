@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Book {
     private Author author;
     private String bookName;
@@ -37,7 +39,7 @@ public class Book {
         System.out.println("Книга № "+ Book.getBookCounter() + " в библиотеке: Автор: " + author.getAuthorName() + " "+ author.getAuthorSurname() +
                 " Название: " + bookName +  " Год издания: " + publicationYear);
     }
-
+    @Override
     public String toString(){
         return String.format("%s %s: %s: %d",
                 this.author.getAuthorName(),
@@ -46,4 +48,17 @@ public class Book {
                 this.publicationYear
         );
         }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this.bookName == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        Book book = (Book) other;
+        return bookName.equals(book.bookName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookName);
+    }
 }
